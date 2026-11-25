@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* Import Tailwind v4 without Preflight (CSS reset) to avoid conflicts with Ant Design */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/preflight" layer(base);
+@import "tailwindcss/utilities" layer(utilities);
+
+/* Tailwind v4 Theme Configuration */
+@theme {
+  /* Single app-wide font stack (Inter), applied globally; no font-* family
+     utilities are needed in components. */
+  --font-sans:
+    "Inter Variable", "SF Pro Display", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Type scale (app UI): 10 / 11 / 12 / 13 / 14 / 16 / 20 / 24px.
+     Use text-xs (12) / text-sm (14) / text-base (16) / text-xl (20) /
+     text-2xl (24), or text-[10px] / text-[11px] / text-[13px] for the steps
+     Tailwind doesn't name. 30px+ is display-only (marketing / hero numbers).
+     No half-pixel sizes, no text-lg (18). Grays: use the gray-* family only. */
+
+  /* Custom Keyframes */
+  --text-xxs: 10px;
+  @keyframes spin-slow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin-reverse {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes ring-draw {
+    0% {
+      stroke-dashoffset: 100;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes fade-slide {
+    0% {
+      opacity: 0;
+      transform: translateY(4px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Custom Animations */
+  --animate-spin-slow: spin-slow 16s linear infinite;
+  --animate-spin-fast: spin-slow 2s linear infinite;
+  --animate-spin-reverse-slow: spin-reverse 16s linear infinite;
+  --animate-ring-draw: ring-draw 4s ease-out forwards;
+  --animate-fade-slide: fade-slide 0.6s ease forwards;
+  --animate-pulse-slow: pulse 4s ease-in-out infinite;
+
+  /* Semantic Color Tokens mapping to ThemeProvider variables */
+  --color-brand: var(--color-brand);
+  --color-brand-muted: var(--color-brand-muted);
+  --color-brand-text: var(--color-primary-dark);
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-bg: var(--color-primary-bg);
+  --color-primary-border: var(--color-primary-border);
+  --color-bg-base: var(--color-bg-base);
+  --color-bg-layout: var(--color-bg-layout);
+  --color-bg-container: var(--color-bg-container);
+  --color-border: var(--color-border);
+  --color-border-secondary: var(--color-border-secondary);
+  --color-header-border: var(--color-header-border);
+  --color-success: var(--color-success);
+  --color-success-bg: var(--color-success-bg);
+  --color-warning: var(--color-warning);
+  --color-warning-bg: var(--color-warning-bg);
+  --color-error: var(--color-error);
+  --color-error-bg: var(--color-error-bg);
+  --color-secondary: var(--color-secondary);
+  --color-tertiary: var(--color-tertiary);
+  --color-info: var(--color-info);
+
+  /* Alpha Channel Variants (Theme Reactive) */
+  --color-brand-alpha-80: color-mix(
+    in srgb,
+    var(--color-brand),
+    transparent 20%
+  );
+  --color-primary-alpha-16: color-mix(
+    in srgb,
+    var(--color-primary),
+    transparent 84%
+  );
+}
+
+@keyframes bell-shake {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-12deg);
+  }
+  45% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-6deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+}
+
+:root {
+  --foreground: hsl(0, 0%, 100%);
+  --background: hsl(250, 24%, 9%);
+  --secondary-background: hsl(250, 21%, 11%);
+
+  --dark-bg: #262626;
+  --header-border-color: #e5e7eb;
+
+  --scrollbar-size: 8px;
+  --scrollbar-thumb: rgba(15, 23, 42, 0.16);
+  --scrollbar-thumb-hover: rgba(15, 23, 42, 0.32);
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--header-border-color);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App-wide scrollbars: thin, rounded thumb, no track or arrow buttons.
+   Chrome 121+ ignores ::-webkit-scrollbar on any element that sets
+   scrollbar-width/scrollbar-color, so the standard properties are applied only
+   where ::-webkit-scrollbar is unsupported (Firefox). Don't set them elsewhere. */
+::-webkit-scrollbar {
+  width: var(--scrollbar-size);
+  height: var(--scrollbar-size);
+}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+::-webkit-scrollbar-button {
+  display: none;
+}
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+  }
+}
+
+/* Brand tokens (FutureJobs default light theme). In the main app these are set
+   at runtime by ThemeProvider; here they are static. */
+:root {
+  color-scheme: light;
+  --color-brand: #0022f6;
+  --color-brand-muted: rgba(16, 29, 87, 0.72);
+  --color-primary: #0022f6;
+  --color-primary-dark: #101d57;
+  --color-primary-light: #8df5f6;
+  --color-primary-bg: #e6f0ff;
+  --color-primary-bg-hover: #cce0ff;
+  --color-primary-border: #99c0ff;
+  --color-primary-border-hover: #6699ff;
+  --color-primary-border-light: rgba(0, 34, 246, 0.16);
+  --color-text-base: #212229;
+  --color-text-secondary: #525252;
+  --color-text-tertiary: #737373;
+  --color-text-quaternary: #a3a3a3;
+  --color-text-disabled: #a3a3a3;
+  --color-bg-base: #ffffff;
+  --color-bg-layout: #fafafa;
+  --color-bg-elevated: #ffffff;
+  --color-bg-container: #ffffff;
+  --color-bg-spotlight: rgba(38, 38, 38, 0.85);
+  --color-bg-mask: rgba(38, 38, 38, 0.45);
+  --color-header-bg: #ffffff;
+  --color-border: #e5e5e5;
+  --color-border-secondary: #f5f5f5;
+  --color-header-border: #e5e7eb;
+  --color-success: #22c55e;
+  --color-success-bg: #f0fdf4;
+  --color-success-text: #16a34a;
+  --color-warning: #f97316;
+  --color-warning-bg: #fff7ed;
+  --color-warning-text: #ea580c;
+  --color-error: #ef4444;
+  --color-error-bg: #fef2f2;
+  --color-error-text: #dc2626;
+  --color-info-bg: #e6f0ff;
+  --color-info-text: #0022f6;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg-base);
+  color: var(--color-text-base);
+}

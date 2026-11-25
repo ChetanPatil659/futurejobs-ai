@@ -1,0 +1,318 @@
+/**
+ * Marketing site — art-directed atmosphere layer.
+ * Direction: luminous & cinematic. A bright, airy canvas lit by soft mesh
+ * gradients and radial spotlights, with the product floating as a premium object
+ * on elegant layered shadows. Dark is used sparingly as a luminous deep-indigo,
+ * never flat near-black. Single Inter font (see --font-sans).
+ */
+
+.fj-marketing {
+  /* luminous deep-indigo (used sparingly, with glow — not heavy near-black) */
+  --ink-900: #0a0f33;
+  --ink-800: #0e1640;
+  --ink-700: #141d54;
+  --ink-600: #1c2870;
+  /* light canvas tints */
+  --paper: #fbfcff;
+  --paper-2: #f3f6ff;
+  /* brand light */
+  --brand: #0022f6;
+  --cyan: #8df5f6;
+  --peri: #6e8bff;
+  --violet: #9d7bff;
+}
+
+/* Interactive elements always show a pointer (Tailwind v4 no longer defaults it) */
+.fj-marketing button:not(:disabled),
+.fj-marketing a,
+.fj-marketing [role="button"] {
+  cursor: pointer;
+}
+
+/* ── Lenis smooth-scroll plumbing ────────────────────────────────────── */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Scroll-progress indicator (GSAP-driven scaleX) */
+.fj-scroll-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 2px;
+  z-index: 60;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, #0022f6 0%, #6e8bff 50%, #8df5f6 100%);
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* ── Typography ──────────────────────────────────────────────────────── */
+.fj-marketing h1,
+.fj-marketing h2 {
+  text-wrap: balance;
+}
+/* `text-wrap: pretty` and `white-space: nowrap` (from .truncate) both resolve to
+   the text-wrap-mode longhand; this unlayered rule would otherwise override
+   .truncate and break ellipsis in the product mockups. Exclude nowrap utilities. */
+.fj-marketing p:not(.truncate):not(.whitespace-nowrap) {
+  text-wrap: pretty;
+}
+.fj-display {
+  letter-spacing: -0.035em;
+  font-weight: 720;
+  line-height: 0.98;
+}
+.fj-tabular {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.fj-eyebrow {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* ── Luminous light canvas ───────────────────────────────────────────── */
+.fj-aurora {
+  background:
+    radial-gradient(60% 50% at 15% 0%, rgba(0, 34, 246, 0.1), transparent 60%),
+    radial-gradient(50% 45% at 85% 5%, rgba(141, 245, 246, 0.22), transparent 60%),
+    radial-gradient(55% 60% at 75% 100%, rgba(110, 139, 255, 0.16), transparent 65%),
+    radial-gradient(45% 50% at 20% 90%, rgba(157, 123, 255, 0.1), transparent 65%),
+    linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+}
+.fj-aurora-soft {
+  background:
+    radial-gradient(50% 50% at 12% 8%, rgba(0, 34, 246, 0.05), transparent 60%),
+    radial-gradient(45% 45% at 88% 92%, rgba(141, 245, 246, 0.12), transparent 65%),
+    linear-gradient(180deg, var(--paper) 0%, var(--paper-2) 100%);
+}
+
+/* Finale — optimistic blue + purple + cyan mesh on white (no graphics) */
+.fj-finale {
+  background:
+    radial-gradient(46% 46% at 18% 4%, rgba(0, 34, 246, 0.12), transparent 60%),
+    radial-gradient(42% 42% at 82% 8%, rgba(157, 123, 255, 0.2), transparent 62%),
+    radial-gradient(60% 55% at 60% 96%, rgba(141, 245, 246, 0.24), transparent 66%),
+    radial-gradient(40% 44% at 8% 78%, rgba(110, 139, 255, 0.16), transparent 66%),
+    linear-gradient(180deg, #ffffff 0%, #f6f7ff 100%);
+}
+
+/* Rainbow mesh — vibrant multi-hue light gradient (no graphics) */
+.fj-rainbow {
+  background:
+    radial-gradient(40% 52% at 10% 8%, rgba(0, 34, 246, 0.18), transparent 60%),
+    radial-gradient(40% 48% at 88% 6%, rgba(141, 245, 246, 0.34), transparent 62%),
+    radial-gradient(46% 52% at 92% 88%, rgba(157, 123, 255, 0.28), transparent 64%),
+    radial-gradient(46% 52% at 8% 92%, rgba(255, 138, 200, 0.24), transparent 64%),
+    radial-gradient(40% 44% at 52% 54%, rgba(255, 196, 120, 0.14), transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f4f6ff 100%);
+}
+.fj-grad-rainbow {
+  background: linear-gradient(110deg, #0022f6 0%, #6e8bff 28%, #9d7bff 52%, #ff7ec8 76%, #2ec9d6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Radial spotlight to sit a product on */
+.fj-spotlight {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 42% at 62% 38%, rgba(141, 245, 246, 0.3), transparent 70%),
+    radial-gradient(46% 50% at 50% 55%, rgba(0, 34, 246, 0.16), transparent 72%);
+}
+
+/* A soft floating light bloom — composable, place + size with utilities */
+.fj-bloom {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 9999px;
+  filter: blur(80px);
+}
+
+/* ── Luminous deep-indigo scene (used sparingly) ─────────────────────── */
+.fj-ink,
+.fj-ink-deep {
+  background:
+    radial-gradient(60% 60% at 20% 10%, rgba(0, 34, 246, 0.5), transparent 60%),
+    radial-gradient(50% 55% at 85% 15%, rgba(141, 245, 246, 0.22), transparent 60%),
+    radial-gradient(70% 70% at 75% 100%, rgba(110, 139, 255, 0.3), transparent 65%),
+    linear-gradient(180deg, var(--ink-700) 0%, var(--ink-900) 100%);
+  color: #eef1ff;
+}
+
+/* ── Mesh / ambient (legacy aliases kept for compatibility) ──────────── */
+.fj-mesh {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(40% 50% at 18% 12%, rgba(0, 34, 246, 0.4), transparent 70%),
+    radial-gradient(38% 46% at 85% 8%, rgba(141, 245, 246, 0.26), transparent 70%),
+    radial-gradient(50% 55% at 70% 95%, rgba(110, 139, 255, 0.3), transparent 72%);
+}
+.fj-mesh-soft {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(45% 45% at 12% 10%, rgba(0, 34, 246, 0.07), transparent 70%),
+    radial-gradient(40% 40% at 90% 80%, rgba(141, 245, 246, 0.14), transparent 70%);
+}
+
+/* ── Film grain (subtle) ─────────────────────────────────────────────── */
+.fj-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ── Grids ───────────────────────────────────────────────────────────── */
+.fj-grid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(141, 245, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(141, 245, 246, 0.1) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(70% 70% at 50% 40%, #000 0%, transparent 78%);
+  mask-image: radial-gradient(70% 70% at 50% 40%, #000 0%, transparent 78%);
+}
+.fj-dotgrid {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(16, 29, 87, 0.1) 1px, transparent 1px);
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(60% 60% at 50% 50%, #000, transparent 75%);
+  mask-image: radial-gradient(60% 60% at 50% 50%, #000, transparent 75%);
+}
+
+/* ── Glass surfaces ──────────────────────────────────────────────────── */
+.fj-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.18) inset,
+    0 30px 80px -30px rgba(8, 12, 50, 0.55);
+}
+.fj-glass-light {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 1px 0 0 rgba(255, 255, 255, 0.9) inset,
+    0 24px 60px -24px rgba(16, 29, 87, 0.22);
+}
+
+/* ── Premium layered shadows for product depth ───────────────────────── */
+.fj-window {
+  border-radius: 18px;
+  box-shadow:
+    0 0 0 1px rgba(16, 29, 87, 0.06),
+    0 2px 8px rgba(16, 29, 87, 0.04),
+    0 18px 40px -16px rgba(16, 29, 87, 0.16),
+    0 50px 90px -40px rgba(0, 34, 246, 0.22),
+    0 100px 160px -80px rgba(16, 29, 87, 0.3);
+}
+.fj-window-ink {
+  border-radius: 18px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.08) inset,
+    0 40px 120px -40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(141, 245, 246, 0.1),
+    0 0 80px -10px rgba(0, 34, 246, 0.35);
+}
+.fj-float {
+  box-shadow:
+    0 0 0 1px rgba(16, 29, 87, 0.05),
+    0 12px 28px -10px rgba(16, 29, 87, 0.22),
+    0 28px 60px -28px rgba(0, 34, 246, 0.22);
+}
+
+/* 3D perspective */
+.fj-perspective {
+  perspective: 2200px;
+}
+
+/* ── Gradient text ───────────────────────────────────────────────────── */
+.fj-grad-text {
+  background: linear-gradient(180deg, #ffffff 0%, #c2ccff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.fj-grad-brand {
+  background: linear-gradient(110deg, #0022f6 0%, #5b73ff 45%, #36d6e0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.fj-grad-ink {
+  background: linear-gradient(120deg, #101d57 0%, #2740b8 55%, #0a8aa0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ── Horizontal marquee ──────────────────────────────────────────────── */
+@keyframes fj-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.fj-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: fj-marquee 40s linear infinite;
+}
+.fj-marquee:hover .fj-marquee-track {
+  animation-play-state: paused;
+}
+
+/* ── Subtle floating drift for hero panels ───────────────────────────── */
+@keyframes fj-drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes fj-drift-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .fj-drift { animation: fj-drift 6s ease-in-out infinite; }
+  .fj-drift-slow { animation: fj-drift-slow 8s ease-in-out infinite; }
+}
+
+/* ── Talent-graph node pulse (kept, used sparingly) ──────────────────── */
+@keyframes fj-node-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .fj-node { animation: fj-node-pulse 3.6s ease-in-out infinite; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fj-marquee-track { animation: none; }
+}
