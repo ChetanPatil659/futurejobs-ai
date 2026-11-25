@@ -10,7 +10,7 @@ dashboard.
 pnpm install
 cp .env.example .env   # adjust if needed
 pnpm dev               # http://localhost:5174
-pnpm build             # outputs to build/
+pnpm build             # outputs to dist/
 ```
 
 ## Environment
