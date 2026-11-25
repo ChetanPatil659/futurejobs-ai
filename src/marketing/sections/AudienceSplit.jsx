@@ -14,8 +14,8 @@ const AudienceSplit = () => {
         <SectionHeading
           align="left"
           eyebrow="Built for how you work"
-          title="One platform, whoever you hire for"
-          lead="Solo or in a team, in-house or agency - FutureJobs scales to the way you run hiring."
+          title="One platform, wherever your search takes you"
+          lead="Solo or in a team, in-house or agency - GetMyInterview scales to the way you run hiring."
           className="max-w-2xl"
         />
 

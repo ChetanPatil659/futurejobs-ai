@@ -111,7 +111,7 @@ const Home = () => {
       label: "For jobseekers",
       onClick: () =>
         window.open(
-          "https://candidate.futurejobs.ai/",
+          "https://candidate.getmyinterview.shop/",
           "_blank",
           "noopener,noreferrer",
         ),

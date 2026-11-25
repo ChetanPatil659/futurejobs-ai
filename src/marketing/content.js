@@ -1,26 +1,26 @@
 /**
  * Marketing site content — single source of truth.
  *
- * Every line here is grounded in the FutureJobs.ai codebase (see PRODUCT_ANALYSIS.md).
+ * Every line here is grounded in the getmyinterview.shop codebase (see PRODUCT_ANALYSIS.md).
  * No invented features, integrations, pricing, customers, or statistics.
  * Items needing team confirmation are marked with a TODO comment.
  */
 
 /** Homepage <title> prefix; the router appends the brand, the build plugin uses it for crawlers. */
 export const HOME_PAGE_TITLE =
-  "AI Recruiting Platform for Sourcing, Outreach and Screening";
+  "AI Job Search Copilot to Land More Interviews";
 
 export const RECRUITER_COUNT = "2,500+";
 export const ACTIVE_JOBS_COUNT = "6,000+";
 export const PROFILES_PROCESSED_COUNT = "11,000+";
 
 export const HERO = {
-  eyebrow: "The AI recruiting operating system",
-  titleLead: "Everything recruiting needs.",
+  eyebrow: "Your AI job search copilot",
+  titleLead: "Everything your job search needs.",
   titleOne: "One",
-  titleAccent: "AI workspace.",
+  titleAccent: "AI copilot.",
   subtitle:
-    "Source exceptional talent, enrich and engage candidates, automate outreach, and hire faster - all in one intelligent platform.",
+    "Find roles that fit you, reach hiring managers directly, follow up on time, and land more interviews - all in one intelligent platform.",
   primaryCta: "Start for free",
   secondaryCta: "Book a demo",
   // TODO: confirm exact trial terms with the team before publishing "14-day".
@@ -31,8 +31,8 @@ export const HERO = {
 /** Landing-page live demo — paste a JD, see matching talent instantly. */
 export const TALENT_PREVIEW = {
   eyebrow: "Try it live",
-  title: "Find top candidates in seconds",
-  lead: "Paste a job description and instantly discover matching talent.",
+  title: "See who a role is really looking for",
+  lead: "Paste a job description and instantly see the profiles it matches.",
   placeholder:
     "Paste a job description here - e.g. “Senior Backend Engineer, 5+ years, Node.js & AWS, based in New York…”",
   cta: "Find matching talent",
@@ -48,7 +48,7 @@ export const TALENT_PREVIEW = {
 /** Vision / mission — the one-person recruiting company, human-in-the-loop. */
 export const VISION = {
   eyebrow: "Our vision",
-  title: "One recruiter. A whole AI team.",
+  title: "One job seeker. A whole AI team.",
   body: "We're building a world where one recruiter runs an entire desk - AI agents handle the busywork while you stay in control and focus on relationships.",
   points: [
     {
@@ -106,7 +106,7 @@ export const VISION = {
 /** Fragmentation story — the disconnected tools recruiters juggle today. */
 export const FRAGMENTATION = {
   eyebrow: "The problem",
-  title: "Recruiting today is in pieces",
+  title: "Job hunting today is in pieces",
   lead: "You source in one tool, find contacts in another, email from Gmail, schedule in Calendar, track in spreadsheets, and chase reminders by hand. Nothing talks to anything.",
   tools: [
     "Sourcing tool",
@@ -118,7 +118,7 @@ export const FRAGMENTATION = {
     "Notes app",
     "Separate CRM",
   ],
-  punchline: "FutureJobs replaces all of it with one intelligent workspace.",
+  punchline: "GetMyInterview replaces all of it with one intelligent workspace.",
 };
 
 /**
@@ -149,7 +149,7 @@ export const FUNNEL = [
   {
     step: "03",
     title: "Reach out",
-    desc: "Launch multi-step sequences across email and WhatsApp - sent from FutureJobs or your own inbox. AI drafts the messages from your job description; you review and send.",
+    desc: "Launch multi-step sequences across email and WhatsApp - sent from GetMyInterview or your own inbox. AI drafts the messages from your job description; you review and send.",
     tags: ["Email", "WhatsApp", "AI calling"],
   },
   {
@@ -221,8 +221,8 @@ export const AUDIENCES = [
 /** Credit model — framed as a benefit. No dollar amounts (TODO: confirm pricing). */
 export const CREDITS = {
   eyebrow: "Pricing that follows the work",
-  title: "Pay for outcomes, not seats",
-  desc: "FutureJobs runs on credits, not per-user fees. You spend on the actions that move a hire forward - revealing a contact, running a sourcing session, sending outreach, matching a resume - and nothing on the rest.",
+  title: "Pay only for what moves you forward",
+  desc: "GetMyInterview runs on credits, not per-user fees. You spend on the actions that move a hire forward - revealing a contact, running a sourcing session, sending outreach, matching a resume - and nothing on the rest.",
   points: [
     "One shared wallet across your workspace",
     "A transparent ledger of every credit spent and why",
@@ -260,7 +260,7 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "After being unemployed for a while, I came across FutureJobs and gave it a shot. It gave me structure, some income, and honestly, a bit of confidence back. I didn't think I'd enjoy recruiting, but here I am.",
+      "After being unemployed for a while, I came across GetMyInterview and gave it a shot. It gave me structure, some income, and honestly, a bit of confidence back. I didn't think I'd enjoy recruiting, but here I am.",
     name: "Kavita G.",
     role: "Talent Manager",
     location: "Pune",
@@ -277,15 +277,15 @@ export const TESTIMONIALS = [
 /** FAQ — answers restate the sections above; also emitted as FAQPage JSON-LD at build. */
 export const FAQ = {
   eyebrow: "FAQ",
-  title: "Questions recruiters ask",
+  title: "Questions job seekers ask",
   items: [
     {
-      question: "What is FutureJobs.ai?",
+      question: "What is getmyinterview.shop?",
       answer:
-        "FutureJobs.ai is an AI recruiting platform that brings sourcing, contact reveal, outreach and candidate screening into one workspace. You describe the role, AI finds matching candidates, and AI agents handle outreach and first-round screening while you approve every step.",
+        "getmyinterview.shop is an AI recruiting platform that brings sourcing, contact reveal, outreach and candidate screening into one workspace. You describe the role, AI finds matching candidates, and AI agents handle outreach and first-round screening while you approve every step.",
     },
     {
-      question: "Who is FutureJobs.ai for?",
+      question: "Who is getmyinterview.shop for?",
       answer:
         "Solo recruiters who want to run a full desk on their own, in-house teams filling requisitions without adding headcount, and agencies managing many clients and roles from one workspace. Teams can invite teammates and share candidate pools and sessions.",
     },
@@ -295,9 +295,9 @@ export const FAQ = {
         "Start from a job description, a spoken prompt, a Boolean query or a profile you already like. AI turns it into a structured search that you can refine with filters for skills, titles, employers, education and region.",
     },
     {
-      question: "How does FutureJobs.ai pricing work?",
+      question: "How does getmyinterview.shop pricing work?",
       answer:
-        "FutureJobs.ai runs on credits instead of per-user seats. You spend credits only on actions that move a hire forward, such as revealing a contact, running a sourcing session, sending outreach or matching a resume, from one wallet shared across your workspace. It's free to start and no credit card is required.",
+        "getmyinterview.shop runs on credits instead of per-user seats. You spend credits only on actions that move a hire forward, such as revealing a contact, running a sourcing session, sending outreach or matching a resume, from one wallet shared across your workspace. It's free to start and no credit card is required.",
     },
     {
       question: "Can I contact candidates by email and WhatsApp?",
@@ -310,7 +310,7 @@ export const FAQ = {
         "An AI assistant asks your screening questions over WhatsApp, then returns a structured scorecard that rates each candidate on competency and cultural fit, so you can focus on the shortlist.",
     },
     {
-      question: "Which tools does FutureJobs.ai integrate with?",
+      question: "Which tools does getmyinterview.shop integrate with?",
       answer:
         "Gmail, Google Drive, Google Calendar and WhatsApp. You can send outreach from your own Gmail inbox and collect resumes by upload, from Google Drive or through inbound applications.",
     },

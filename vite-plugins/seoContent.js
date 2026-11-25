@@ -8,10 +8,10 @@ import {
   HOME_PAGE_TITLE,
 } from "../src/marketing/content.js";
 
-const SITE_URL = "https://futurejobs.ai";
-const SITE_NAME = "FutureJobs.ai";
+const SITE_URL = "https://getmyinterview.shop";
+const SITE_NAME = "GetMyInterview";
 const TITLE = `${HOME_PAGE_TITLE} | ${SITE_NAME}`;
-const DESCRIPTION = `${SITE_NAME} is the AI recruiting operating system. Source candidates, enrich contacts, run outreach and AI calls, and track every hire in one workspace.`;
+const DESCRIPTION = `${SITE_NAME} is your AI job search copilot. Find roles that fit you, reach hiring managers directly, follow up on time, and land more interviews.`;
 const LOGO_URL = `${SITE_URL}/logo.png`;
 const SIGNUP_URL = `${SITE_URL}/signup`;
 const SEO_CONTENT_ID = "seo-content";
@@ -74,7 +74,7 @@ const STRUCTURED_DATA = {
       url: SITE_URL,
       description: DESCRIPTION,
       applicationCategory: "BusinessApplication",
-      applicationSubCategory: "Recruiting software",
+      applicationSubCategory: "Job search software",
       operatingSystem: "Web",
       offers: {
         "@type": "Offer",

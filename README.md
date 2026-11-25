@@ -1,7 +1,7 @@
-# FutureJobs.ai — Landing Page
+# getmyinterview.shop — Landing Page
 
-Standalone repo for the FutureJobs.ai marketing homepage (`/`), extracted from
-`futurejobs-fe`. It contains only the landing page — no app routes, auth, or
+Standalone repo for the getmyinterview.shop marketing homepage (`/`), extracted from
+`GetMyInterview-fe`. It contains only the landing page — no app routes, auth, or
 dashboard.
 
 ## Run
@@ -18,7 +18,7 @@ pnpm build             # outputs to dist/
 | Variable | Purpose |
 | --- | --- |
 | `VITE_APP_BACKEND_BASE_URL` | API used by the "paste a JD → matching talent" preview |
-| `VITE_APP_URL` | Product app the CTAs point to (log in, sign up, privacy, terms). Defaults to `https://futurejobs.ai` |
+| `VITE_APP_URL` | Product app the CTAs point to (log in, sign up, privacy, terms). Defaults to `https://getmyinterview.shop` |
 
 ## Layout
 

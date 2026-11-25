@@ -62,7 +62,7 @@ export const DashboardScene = () => (
       <Reveal className="mx-auto max-w-2xl text-center">
         <Eyebrow>Dashboard</Eyebrow>
         <h2 className="fj-display mt-3 text-[clamp(2.15rem,1.4rem+2.8vw,3.5rem)] text-primary-dark">
-          Your recruiting <span className="fj-grad-brand">command center</span>
+          Your job search <span className="fj-grad-brand">command center</span>
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-[1.05rem] leading-relaxed text-[var(--color-text-secondary)]">
           Workspace analytics, AI-generated summaries, pipeline and credit
@@ -70,7 +70,7 @@ export const DashboardScene = () => (
         </p>
       </Reveal>
       <Reveal delay={0.12} y={28} className="mx-auto mt-10 max-w-6xl">
-        <BrowserMockup url="futurejobs.ai">
+        <BrowserMockup url="getmyinterview.shop">
           <CommandCenterBoard />
         </BrowserMockup>
       </Reveal>
@@ -89,7 +89,7 @@ export const IntelligenceScene = () => (
         <Reveal>
           <Eyebrow>Candidate intelligence</Eyebrow>
           <h2 className="fj-display mt-4 text-[clamp(2.15rem,1.4rem+2.8vw,3.5rem)] text-primary-dark">
-            Browse an AI-powered talent graph
+            See how you match every role
           </h2>
           <p className="mt-5 max-w-md text-[1.05rem] leading-relaxed text-[var(--color-text-secondary)]">
             Describe the role - type it or say it. AI returns ranked candidates
@@ -105,7 +105,7 @@ export const IntelligenceScene = () => (
           />
         </Reveal>
         <Reveal delay={0.1} y={28} className="relative min-w-0 lg:-mr-10">
-          <BrowserMockup url="futurejobs.ai">
+          <BrowserMockup url="getmyinterview.shop">
             <SourcingBoard />
           </BrowserMockup>
           <div className="absolute -left-6 -bottom-8 z-20 hidden w-56 sm:block">
@@ -135,7 +135,7 @@ export const ProfileScene = () => (
         <Reveal className="order-1 lg:order-2">
           <Eyebrow>AI candidate profile</Eyebrow>
           <h2 className="fj-display mt-4 text-[clamp(2.15rem,1.4rem+2.8vw,3.5rem)] text-primary-dark">
-            An AI recruiting copilot for every profile
+            An AI career copilot for your profile
           </h2>
           <p className="mt-5 max-w-md text-[1.05rem] leading-relaxed text-[var(--color-text-secondary)]">
             Open anyone and get an instant, AI-generated read - highlights,
@@ -176,7 +176,7 @@ export const SignalsScene = () => {
           <Reveal>
             <Eyebrow>Signals</Eyebrow>
             <h2 className="fj-display mt-4 text-[clamp(2.15rem,1.4rem+2.8vw,3.5rem)] text-primary-dark">
-              Reach out at the perfect moment
+              Apply at the perfect moment
             </h2>
             <p className="mt-5 max-w-md text-[1.05rem] leading-relaxed text-[var(--color-text-secondary)]">
               AI reads company and candidate signals - funding, growth, layoffs,
@@ -215,7 +215,7 @@ export const ContactScene = () => (
         <Reveal>
           <Eyebrow>Contact discovery</Eyebrow>
           <h2 className="fj-display mt-3 text-[clamp(2.15rem,1.4rem+2.8vw,3.5rem)] text-primary-dark">
-            Verified emails & phone numbers, instantly
+            Reach hiring managers directly
           </h2>
           <p className="mt-5 max-w-md text-[1.05rem] leading-relaxed text-[var(--color-text-secondary)]">
             Find personal and work emails and direct phone numbers right inside
@@ -231,7 +231,7 @@ export const ContactScene = () => (
           />
         </Reveal>
         <Reveal delay={0.1} y={28} className="min-w-0 lg:-mr-6">
-          <BrowserMockup url="futurejobs.ai">
+          <BrowserMockup url="getmyinterview.shop">
             <RevealBoard />
           </BrowserMockup>
         </Reveal>
@@ -251,7 +251,7 @@ export const OutreachScene = () => (
         <Reveal>
           <Eyebrow>Multi-channel outreach</Eyebrow>
           <h2 className="fj-display mt-3 text-[clamp(2.15rem,1.4rem+2.8vw,3.5rem)] text-primary-dark">
-            Reach candidates everywhere - from one place
+            Reach recruiters everywhere - from one place
           </h2>
           <p className="mt-5 max-w-md text-[1.05rem] leading-relaxed text-[var(--color-text-secondary)]">
             Email, your own Gmail, WhatsApp, and AI voice calls - sent as
@@ -263,7 +263,7 @@ export const OutreachScene = () => (
           </div>
         </Reveal>
         <Reveal delay={0.1} y={28} className="min-w-0 lg:-mr-6">
-          <BrowserMockup url="futurejobs.ai">
+          <BrowserMockup url="getmyinterview.shop">
             <SequenceBoard />
           </BrowserMockup>
         </Reveal>
@@ -318,7 +318,7 @@ export const RemindersScene = () => (
             Never let a follow-up slip
           </h2>
           <p className="mt-5 max-w-md text-[1.05rem] leading-relaxed text-[var(--color-text-secondary)]">
-            Set a reminder on any candidate and FutureJobs helps you pick the
+            Set a reminder on any candidate and GetMyInterview helps you pick the
             right moment - then keeps it in sync with your Google Calendar so
             nothing is forgotten.
           </p>

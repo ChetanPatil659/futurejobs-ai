@@ -58,7 +58,7 @@ const Impact = () => (
           Proof at scale
         </span>
         <h2 className="fj-display text-[clamp(2rem,1.4rem+2.8vw,3.6rem)] text-primary-dark">
-          A platform recruiters{" "}
+          A platform thousands{" "}
           <span className="fj-grad-rainbow">already run on.</span>
         </h2>
       </Reveal>

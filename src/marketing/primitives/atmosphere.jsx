@@ -103,7 +103,7 @@ export const NetworkField = ({
  * Large browser mockup with realistic chrome. `tone` switches light/ink.
  */
 export const BrowserMockup = ({
-  url = "futurejobs.ai",
+  url = "getmyinterview.shop",
   tone = "light",
   className,
   children,

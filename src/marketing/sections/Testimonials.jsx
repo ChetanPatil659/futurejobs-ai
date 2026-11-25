@@ -27,7 +27,7 @@ const Testimonials = () => {
             Proven by individuals
           </span>
           <h2 className="fj-display text-[clamp(2rem,1.4rem+2.6vw,3.2rem)] text-primary-dark">
-            The future of recruiting, already happening
+            The future of job hunting, already happening
           </h2>
         </Reveal>
 

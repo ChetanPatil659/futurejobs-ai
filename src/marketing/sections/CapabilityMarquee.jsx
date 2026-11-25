@@ -29,7 +29,7 @@ const CAPS = [
   ],
   [
     "Email sequences",
-    "Automated multi-step email campaigns, sent from FutureJobs or your inbox.",
+    "Automated multi-step email campaigns, sent from GetMyInterview or your inbox.",
   ],
   [
     "WhatsApp outreach",

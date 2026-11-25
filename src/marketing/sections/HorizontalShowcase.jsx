@@ -68,7 +68,7 @@ const HorizontalShowcase = () => {
               as="h2"
               className="fj-display mt-4 text-[clamp(2rem,1.4rem+2.8vw,3.4rem)] text-white"
               parts={[
-                { text: "Everything a recruiting team does -" },
+                { text: "Everything your job search needs -" },
                 { text: "in one workspace.", className: "fj-grad-text" },
               ]}
             />

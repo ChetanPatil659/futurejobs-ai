@@ -75,10 +75,10 @@ const StoryFunnel = () => {
             {/* Sticky narrative rail */}
             <div>
               <span className="fj-eyebrow mb-3 block text-xs font-semibold text-brand">
-                One continuous workflow
+                One continuous journey
               </span>
               <h2 className="fj-display mb-8 max-w-md text-[clamp(1.7rem,1.2rem+1.6vw,2.5rem)] text-primary-dark">
-                AI carries every candidate from first search to booked call
+                AI takes you from first search to booked interview
               </h2>
               <ol className="flex flex-col gap-2">
                 {FUNNEL.map((s, i) => {
@@ -176,7 +176,7 @@ const StoryFunnel = () => {
                   </BrowserMockup>
                   <div className="mt-4 flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
                     <Icon name="bolt" size={14} className="text-brand" />
-                    Live in the FutureJobs workspace
+                    Live in the GetMyInterview workspace
                   </div>
                 </motion.div>
               </AnimatePresence>

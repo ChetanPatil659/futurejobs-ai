@@ -1,6 +1,6 @@
 /**
  * Product UI mockups — the centerpiece. Built in markup (no screenshots) so they
- * stay crisp at any scale. Each "board" mirrors a real FutureJobs surface and
+ * stay crisp at any scale. Each "board" mirrors a real GetMyInterview surface and
  * renders inside an app shell with a sidebar + topbar for product realism.
  */
 import { Icon } from "./icons";

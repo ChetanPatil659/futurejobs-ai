@@ -89,12 +89,12 @@ const CTASection = ({ onStartFree, onBookDemo }) => {
           className="mx-auto max-w-4xl text-center"
         >
           <span className="fj-eyebrow text-xs font-semibold text-brand">
-            The recruiting operating system
+            Your AI job search copilot
           </span>
           <h2 className="fj-display mt-5 text-[clamp(2.4rem,1.5rem+3.2vw,4.25rem)] text-primary-dark">
             <span className="block">One AI. One workspace.</span>
             <span className="fj-grad-brand block">
-              Everything recruiters need.
+              Every interview within reach.
             </span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-[1.1rem] leading-relaxed text-[var(--color-text-secondary)]">
@@ -129,7 +129,7 @@ const CTASection = ({ onStartFree, onBookDemo }) => {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="absolute left-1/2 top-0 z-10 w-[680px] max-w-[88vw] -translate-x-1/2"
         >
-          <BrowserMockup url="futurejobs.ai">
+          <BrowserMockup url="getmyinterview.shop">
             <DashboardBoard />
           </BrowserMockup>
         </motion.div>
@@ -147,7 +147,7 @@ const CTASection = ({ onStartFree, onBookDemo }) => {
           style={{ y: yDown }}
           className="fj-drift-slow absolute right-[2%] top-28 z-20 hidden w-[400px] lg:block xl:right-[6%]"
         >
-          <BrowserMockup url="futurejobs.ai">
+          <BrowserMockup url="getmyinterview.shop">
             <div className="max-h-[420px] overflow-hidden">
               <SequenceBoard />
             </div>

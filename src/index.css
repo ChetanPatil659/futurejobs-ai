@@ -189,7 +189,7 @@
   }
 }
 
-/* Brand tokens (FutureJobs default light theme). In the main app these are set
+/* Brand tokens (GetMyInterview default light theme). In the main app these are set
    at runtime by ThemeProvider; here they are static. */
 :root {
   color-scheme: light;

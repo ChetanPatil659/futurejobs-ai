@@ -26,7 +26,7 @@ const Fragmentation = () => {
           <div>
             <span className="fj-eyebrow text-xs font-semibold text-[var(--color-error-text)]">{F.eyebrow}</span>
             <h2 className="fj-display mt-4 text-[clamp(2.2rem,1.4rem+3vw,3.8rem)] text-primary-dark">
-              Recruiting today is{" "}
+              Job hunting today is{" "}
               <span className="text-[var(--color-text-quaternary)] line-through decoration-[var(--color-error)]/40 decoration-2">in pieces</span>
             </h2>
             <p className="mt-5 max-w-md text-[1.05rem] leading-relaxed text-[var(--color-text-secondary)]">

@@ -62,7 +62,7 @@ const Navbar = ({ links = [], onStartFree, onSeeHow }) => {
             className="h-8 w-auto object-contain sm:h-9"
           />
           <span className="text-[19px] font-bold tracking-tight text-primary-dark">
-            Futurejobs<span className="text-brand">AI</span>
+            GetMyInterview<span className="text-brand">AI</span>
           </span>
         </a>
 

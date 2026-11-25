@@ -28,7 +28,7 @@ const Footer = ({ links = [] }) => {
     const addr = new FormData(e.currentTarget).get("email");
     const to = themeConfig.contactEmail || email;
     if (addr && to) {
-      window.location.href = `mailto:${to}?subject=Keep me posted on FutureJobs&body=Please add ${addr} to product updates.`;
+      window.location.href = `mailto:${to}?subject=Keep me posted on GetMyInterview&body=Please add ${addr} to product updates.`;
     }
     setSubscribed(true);
   };
@@ -47,7 +47,7 @@ const Footer = ({ links = [] }) => {
                 className="h-9 w-auto object-contain"
               />
               <span className="text-xl font-bold tracking-tight text-primary-dark">
-                Futurejobs<span className="text-brand">AI</span>
+                GetMyInterview<span className="text-brand">AI</span>
               </span>
             </div>
             <p className="max-w-xs text-sm leading-relaxed text-[var(--color-text-secondary)]">
