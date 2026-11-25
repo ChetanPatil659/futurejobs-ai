@@ -88,7 +88,7 @@ const Home = () => {
     { label: "How it works", onClick: () => scrollToId("how-it-works") },
     { label: "Signals", onClick: () => scrollToId("signals") },
     { label: "Pricing", onClick: () => scrollToId("pricing") },
-    { label: "Log in", onClick: onLogin },
+    { label: "Log in", onClick: () => {} },
   ];
 
   const railItems = [

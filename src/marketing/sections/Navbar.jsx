@@ -83,7 +83,6 @@ const Navbar = ({ links = [], onStartFree, onSeeHow }) => {
           <Button
             variant={dark ? "inverse" : "primary"}
             size="sm"
-            onClick={onStartFree}
           >
             Start for free
           </Button>
